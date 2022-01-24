@@ -33,7 +33,7 @@ st.markdown("<h4 style='text-align: center; color: black;'>Web App created by Sa
 
 movies = pd.read_csv('data/train_data.csv')
 tfv = TfidfVectorizer()
-vectors = tfv.fit_transform(data['tags'])
+vectors = tfv.fit_transform(movies['tags'])
 similarity = cosine_similarity(vectors)
 
 # movies = pickle.load(open('data/movies.pkl','rb'))
