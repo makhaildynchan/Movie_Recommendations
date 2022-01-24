@@ -29,7 +29,7 @@ def recommend(movie):
 
 st.markdown("<h1 style='text-align: center; color: black;'>Movie Recommender System</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color: black;'>Find a similar movie from a dataset of 5,000 movies!</h4>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center; color: black;'>Web App created by Sagar Bapodara</h4>", unsafe_allow_html=True)
+
 
 movies = pd.read_csv('data/train_data.csv')
 tfv = TfidfVectorizer()
