@@ -70,49 +70,72 @@ col6,col7,col8 = st.columns(3)
 with col7:
     input = st.selectbox(label='Enter a movie title',options = movies['title'])
     butt = st.button('Show Recommendations')
-    
+st.text("")
+st.text("")
+st.text("")
+st.text("")
+st.text("")
 if butt:
     recommended_movie_names,recommended_movie_posters,recommended_movie_overview,recommended_movie_runtime,recommended_movie_status,recommended_movie_rating= recommend(input)
+    
+    
     col1, col2,col3,col4,col5 = st.columns(5)    
+    
+    
+    
     with col1:
-        st.header(recommended_movie_names[0])
+        st.subheader(recommended_movie_names[0])
+        st.text("")
         st.image(recommended_movie_posters[0])
-        st.write('Overview:')
+        st.write('**Overview:**')
         st.markdown(recommended_movie_overview[0])
         st.text(recommended_movie_runtime[0])
         st.text(recommended_movie_status[0])
+        st.write('**Rating:**')
         st.text(recommended_movie_rating[0])
 
     with col2:
-        st.header(recommended_movie_names[1])
+        st.subheader(recommended_movie_names[1])
+        st.text("")
         st.image(recommended_movie_posters[1])
+        st.write('**Overview:**')
         st.markdown(recommended_movie_overview[1])
         st.text(recommended_movie_runtime[1])
         st.text(recommended_movie_status[1])
+        st.write('**Rating:**')
         st.text(recommended_movie_rating[1])
          
     with col3:
-        st.header(recommended_movie_names[2])
+        st.subheader(recommended_movie_names[2])
+        st.text("")
         st.image(recommended_movie_posters[2])
+        st.write('**Overview:**')
         st.markdown(recommended_movie_overview[2])
         st.text(recommended_movie_runtime[2])
         st.text(recommended_movie_status[2])
+        st.write('**Rating:**')
         st.text(recommended_movie_rating[2])
 
     with col4:
-        st.header(recommended_movie_names[3])
+        st.subheader(recommended_movie_names[3])
+        st.text("")
         st.image(recommended_movie_posters[3])
+        st.write('**Overview:**')
         st.markdown(recommended_movie_overview[3])
         st.text(recommended_movie_runtime[3])
         st.text(recommended_movie_status[3])
+        st.write('**Rating:**')
         st.text(recommended_movie_rating[3])
 
     with col5:
-        st.header(recommended_movie_names[4])
+        st.subheader(recommended_movie_names[4])
+        st.text("")
         st.image(recommended_movie_posters[4])
+        st.write('**Overview:**')
         st.markdown(recommended_movie_overview[4])
         st.text(recommended_movie_runtime[4])
         st.text(recommended_movie_status[4])
+        st.write('**Rating:**')
         st.text(recommended_movie_rating[4])
 
 
