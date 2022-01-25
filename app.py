@@ -12,6 +12,28 @@ st.title('Movie Recommender Sysytem')
 st.markdown("<h1 style='text-align: center; color: black;'>Movie Recommender System</h1>", unsafe_allow_html=True)
 
 
+import base64
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+.stApp {
+  background-image: url("data:image/png;base64,%s");
+  background-size: cover;
+}
+</style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+set_background('images/background.jpg')
+
+
+
 movies = pd.read_csv('data/train_data.csv')
 tfv = TfidfVectorizer()
 vectors = tfv.fit_transform(movies['tags'])
@@ -44,7 +66,6 @@ def recommend(movie):
         recommended_movie_rating.append(movies.iloc[i[0]].vote_average)
     return recommended_movie_names,recommended_movie_posters,recommended_movie_overview,recommended_movie_runtime,recommended_movie_status,recommended_movie_rating
 
-st.image("images/movie_banner.jpg",use_column_width=True)
 col6,col7,col8 = st.columns(3)
 with col7:
     input = st.selectbox(label='Enter a movie title',options = movies['title'])
