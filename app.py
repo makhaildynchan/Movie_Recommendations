@@ -7,7 +7,21 @@ import pandas as pd
 import requests
 st.set_page_config(layout="wide")
 # st.title('Movie Recommender Sysytem')
-st.markdown("<h1 style='text-align: center; color: red;'>Movie Recommender System</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>Movie Recommender System</h1>", unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://www.shutterstock.com/image-vector/collection-film-strip-frame-isolated-on-1194562906")
+    }
+   .sidebar .sidebar-content {
+        background: url("https://www.shutterstock.com/image-vector/collection-film-strip-frame-isolated-on-1194562906")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 menu = ["Home", "Recommend", "About"]
 st.sidebar.selectbox("Menu", menu)
