@@ -1,6 +1,2 @@
-﻿Flask
-numpy
-pandas
-scikit-learn
-gunicorn
 streamlit
+requests
