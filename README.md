@@ -1,10 +1,13 @@
 # Movie Recommendation System
 This machine learning project implements a content-based movie recommendation system in Python that predicts or suggests movies based on user's movie interests. 
 
-## Database
-IDBM dataset
+## Data
+The dataset used can be downloaded from [Kaggle: TMDB 5000 Movie Dataset](https://www.kaggle.com/tmdb/tmdb-movie-metadata). It contains information of around 5000 movies. Out of all features present in this dataset, features which are used for this project are - movie_id, title,genres, keywords, overview, cast, crew, runtime, status, vote_average.
+![App Screenshot](images/data.JPG)
+These data went through cleaning and preprocessing before applying machine learning algorithms.
 
-### API
+The details of the movies(title, genre, runtime, rating, poster, etc) are fetched using an API by [TMDB](https://www.themoviedb.org/documentation/api) and using the TMDB id of the movie in the API.
+
 
 ## Approach:
 ![App Screenshot](images/contentbased.JPG)
@@ -15,8 +18,10 @@ Those features will then be processed using TF-IDF Vectorizer, an algorithm that
 
 ### Cosine similarity
 ![App Screenshot](images/cosinesim.JPG)
+
 Aforementioned, cosine similarity gives a useful measure of how similar two documents are likely to be in terms of their subject matter. It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. Mathematically, it measures the cosine of the angle between two vectors projected in a multi-dimensional space. The cosine similarity is advantageous because even if the two similar documents are far apart by the Euclidean distance (due to the size of the document), chances are they may still be oriented closer together. The smaller the angle, higher the cosine similarity.
 
+Reference: [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
-##3 Deploy
+## 3 Deploy
 streamlit
