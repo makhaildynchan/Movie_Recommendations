@@ -2,14 +2,21 @@
 This machine learning project implements a content-based movie recommendation system in Python that predicts or suggests movies based on user's movie interests. 
 
 ## Data
-The dataset used can be downloaded from [Kaggle: TMDB 5000 Movie Dataset](https://www.kaggle.com/tmdb/tmdb-movie-metadata). It contains information of around 5000 movies. Out of all features present in this dataset, features which are used for this project are - movie_id, title,genres, keywords, overview, cast, crew, runtime, status, vote_average.
-![App Screenshot](images/data.JPG)
-These data went through cleaning and preprocessing before applying machine learning algorithms.
 
+The dataset used can be downloaded from [Kaggle: TMDB 5000 Movie Dataset](https://www.kaggle.com/tmdb/tmdb-movie-metadata). It contains information of around 5000 movies. Out of all features present in this dataset, features which are used for this project are - movie_id, title,genres, keywords, overview, cast, crew, runtime, status, vote_average.
+
+![App Screenshot](images/data.JPG)
+
+These data went through cleaning and preprocessing before applying machine learning algorithms.
 The details of the movies(title, genre, runtime, rating, poster, etc) are fetched using an API by [TMDB](https://www.themoviedb.org/documentation/api) and using the TMDB id of the movie in the API.
 
+### How to get the API key?
 
-## Approach:
+Create an account in https://www.themoviedb.org/, click on the `API` link from the left hand sidebar in your account settings and fill all the details to apply for API key. If you are asked for the website URL, just give "NA" if you don't have one. You will see the API key in your `API` sidebar once your request is approved.
+
+
+
+## Approach
 ![App Screenshot](images/contentbased.JPG)
 
 Content based algorithm attempts to figure out the user's favourite aspects of an item and then recommends similar items that includes those aspects. In this project, attributes such as genre, top 3 actors of the movie, overview/plot, director, and keywords representing the movie are used to make suggestions for the users. These features can provide a great insight on understanding users' preferences and help to produce better movie recommendations that are similar to their chosen movie. 
