@@ -7,7 +7,7 @@ import pandas as pd
 import requests
 st.set_page_config(layout="wide")
 # st.title('Movie Recommender Sysytem')
-st.markdown("<h1 style='text-align: center; color: white;'>Movie Recommender System</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Movie Recommender System</h1>", unsafe_allow_html=True)
 
 st.markdown(
     """
@@ -58,13 +58,11 @@ def recommend(movie):
         recommended_movie_rating.append(movies.iloc[i[0]].vote_average)
     return recommended_movie_names,recommended_movie_posters,recommended_movie_overview,recommended_movie_runtime,recommended_movie_status,recommended_movie_rating
 
-
+st.image("images/movie_banner.jpg",use_column_width=True)
 col6,col7,col8 = st.columns(3)
 with col7:
-    # select_label = '<p style="font-family:Courier; color:Blue; font-size: 20px;">Select the movie</p>'
-    # lab = st.markdown(select_label,unsafe_allow_html=True)
-    input = st.selectbox(label='Select the movie',options = movies['title'])
-    butt = st.button('Show Recommendation')
+    input = st.selectbox(label='Enter a movie title',options = movies['title'])
+    butt = st.button('Show Recommendations')
     
 if butt:
     recommended_movie_names,recommended_movie_posters,recommended_movie_overview,recommended_movie_runtime,recommended_movie_status,recommended_movie_rating= recommend(input)
