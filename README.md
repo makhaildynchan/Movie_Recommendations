@@ -2,7 +2,7 @@
 This machine learning project implements a content-based movie recommendation system in Python that predicts or suggests movies based on user's movie interests. 
 
 ## Demo
-<h2 align='center'>https://makhaildynchan/movie_recommendations/main/app.py/</h2>
+<http://makhaildynchan/movie_recommendations/main/app.py>
 
 ## Data
 
