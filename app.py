@@ -8,8 +8,8 @@ import requests
 
 
 st.set_page_config(layout="wide")
-st.title('Movie Recommender Sysytem')
-st.markdown("<h1 style='text-align: center; color: black;'>Movie Recommender System</h1>", unsafe_allow_html=True)
+# st.title('Movie Recommender Sysytem')
+st.markdown("<h1 style='text-align: center; color: white;'>Movie Recommender System</h1>", unsafe_allow_html=True)
 
 
 import base64
@@ -77,6 +77,7 @@ if butt:
     with col1:
         st.header(recommended_movie_names[0])
         st.image(recommended_movie_posters[0])
+        st.write('Overview:')
         st.markdown(recommended_movie_overview[0])
         st.text(recommended_movie_runtime[0])
         st.text(recommended_movie_status[0])
@@ -114,14 +115,4 @@ if butt:
         st.text(recommended_movie_status[4])
         st.text(recommended_movie_rating[4])
 
-    # with col1:
-
-    # with col1:
-
-    # with col1:
-
-    # with col1:
-
-    # with col1:         
-    
 
