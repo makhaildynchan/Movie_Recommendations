@@ -34,4 +34,7 @@ Aforementioned, cosine similarity gives a useful measure of how similar two docu
 Reference: [Understanding the Math behind Cosine Similarity](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
 ## Sample Demo
-https://github.com/makhaildynchan/Movie_Recommendations/blob/main/images/demo.mp4
+
+https://user-images.githubusercontent.com/90952513/151266820-2bb165f0-0c6a-461e-acdd-561ad1675a8d.mp4
+
+
