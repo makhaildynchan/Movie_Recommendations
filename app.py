@@ -5,6 +5,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import webbrowser
 
 
 st.set_page_config(layout="wide")
@@ -139,3 +140,29 @@ if butt:
         st.text(recommended_movie_rating[4])
 
 
+
+footer="""<style>
+a:link , a:visited{
+color: red;
+background-color: transparent;
+}
+a:hover,  a:active {
+color: white;
+background-color: transparent;
+text-decoration: underline;
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Developed by <a style='display: block; text-align: center;' href="https://www.linkedin.com/in/makhaildynchan/" target="_blank">Khaildyn Chan</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
