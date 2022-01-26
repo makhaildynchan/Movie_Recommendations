@@ -25,7 +25,8 @@ def set_background(png_file):
     <style>
 .stApp {
   background-image: url("data:image/png;base64,%s");
-  background-size: auto;
+ background-repeat: no-repeat;
+ background-size: 100%;
 }
 </style>
     ''' % bin_str
