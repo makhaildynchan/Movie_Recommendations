@@ -1,7 +1,7 @@
 # Movie Recommendation System
 This machine learning project implements a content-based movie recommendation system in Python that predicts or suggests movies based on user's movie interests. 
 
-#:rocket: Live Demo on Streamlit :rocket:
+# :rocket: Live Demo on Streamlit :rocket:
 <https://share.streamlit.io/makhaildynchan/movie_recommendations/main/app.py>
 
 ## Data
